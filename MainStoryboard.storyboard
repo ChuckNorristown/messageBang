@@ -48,7 +48,13 @@
                             <outlet property="delegate" destination="ozN-si-fCC" id="axO-aB-aVq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="messageBang" id="PL6-5R-QtM"/>
+                    <navigationItem key="navigationItem" title="messageBang" id="PL6-5R-QtM">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="uW8-Ly-SfZ">
+                            <connections>
+                                <action selector="logout:" destination="ozN-si-fCC" id="cXc-YR-H2k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="b0u-4t-k73" kind="push" identifier="showLogin" id="2SW-Cn-Sir"/>
                     </connections>
@@ -82,6 +88,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="b0u-4t-k73" eventType="touchUpInside" id="Z9D-v1-cq5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Don't have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSO-QU-ITU">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -124,6 +133,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="messageBang" id="PQ5-Is-0W8"/>
+                    <connections>
+                        <outlet property="passwordField" destination="LxS-sW-A7P" id="umh-Hk-EUO"/>
+                        <outlet property="usernameField" destination="bte-ev-jNS" id="BXk-bv-4Gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAg-Ob-xjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -313,26 +326,6 @@
         <image name="friends.png" width="40" height="24"/>
         <image name="inbox.png" width="32" height="21"/>
     </resources>
-    <classes>
-        <class className="InboxViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InboxViewController.h"/>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SignUpViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignUpViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signUp:"/>
-                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
