@@ -34,6 +34,8 @@
 		3CEF6098180EE4DD00F8F06B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEF608F180EE4DD00F8F06B /* Security.framework */; };
 		3CEF6099180EE4DD00F8F06B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEF6090180EE4DD00F8F06B /* StoreKit.framework */; };
 		3CEF609A180EE4DD00F8F06B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEF6091180EE4DD00F8F06B /* SystemConfiguration.framework */; };
+		3CEF609D180EE7E900F8F06B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF609C180EE7E900F8F06B /* LoginViewController.m */; };
+		3CEF60A0180EE83400F8F06B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF609F180EE83400F8F06B /* SignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +59,8 @@
 		3CA09BAB180DEF0200D35398 /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2x.png"; sourceTree = "<group>"; };
 		3CA09BAC180DEF0200D35398 /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
 		3CA09BAD180DEF0200D35398 /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
-		3CA09BB5180EC84000D35398 /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
-		3CA09BB6180EC84000D35398 /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
+		3CA09BB5180EC84000D35398 /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InboxViewController.h; path = ../InboxViewController.h; sourceTree = "<group>"; };
+		3CA09BB6180EC84000D35398 /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InboxViewController.m; path = ../InboxViewController.m; sourceTree = "<group>"; };
 		3CEF6087180EE16500F8F06B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3CEF6089180EE4DD00F8F06B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3CEF608A180EE4DD00F8F06B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -69,6 +71,10 @@
 		3CEF608F180EE4DD00F8F06B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3CEF6090180EE4DD00F8F06B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3CEF6091180EE4DD00F8F06B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3CEF609B180EE7E900F8F06B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
+		3CEF609C180EE7E900F8F06B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
+		3CEF609E180EE83400F8F06B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = ../SignUpViewController.h; sourceTree = "<group>"; };
+		3CEF609F180EE83400F8F06B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = ../SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,6 @@
 			children = (
 				3CA09BB4180DEF0E00D35398 /* Images */,
 				3CA09BA6180DEDC100D35398 /* MainStoryboard.storyboard */,
-				3CA09BB5180EC84000D35398 /* InboxViewController.h */,
-				3CA09BB6180EC84000D35398 /* InboxViewController.m */,
 				3CA09B8F180DE9A800D35398 /* messageBang */,
 				3CA09B88180DE9A800D35398 /* Frameworks */,
 				3CA09B87180DE9A800D35398 /* Products */,
@@ -141,6 +145,12 @@
 			children = (
 				3CA09B98180DE9A800D35398 /* AppDelegate.h */,
 				3CA09B99180DE9A800D35398 /* AppDelegate.m */,
+				3CEF609E180EE83400F8F06B /* SignUpViewController.h */,
+				3CEF609F180EE83400F8F06B /* SignUpViewController.m */,
+				3CEF609B180EE7E900F8F06B /* LoginViewController.h */,
+				3CEF609C180EE7E900F8F06B /* LoginViewController.m */,
+				3CA09BB5180EC84000D35398 /* InboxViewController.h */,
+				3CA09BB6180EC84000D35398 /* InboxViewController.m */,
 				3CA09B90180DE9A800D35398 /* Supporting Files */,
 			);
 			path = messageBang;
@@ -248,6 +258,8 @@
 				3CA09B96180DE9A800D35398 /* main.m in Sources */,
 				3CA09B9A180DE9A800D35398 /* AppDelegate.m in Sources */,
 				3CA09BB7180EC84000D35398 /* InboxViewController.m in Sources */,
+				3CEF609D180EE7E900F8F06B /* LoginViewController.m in Sources */,
+				3CEF60A0180EE83400F8F06B /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
