@@ -36,6 +36,7 @@
 		3CEF609A180EE4DD00F8F06B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEF6091180EE4DD00F8F06B /* SystemConfiguration.framework */; };
 		3CEF609D180EE7E900F8F06B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF609C180EE7E900F8F06B /* LoginViewController.m */; };
 		3CEF60A0180EE83400F8F06B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF609F180EE83400F8F06B /* SignUpViewController.m */; };
+		3CEF60A3180F11D000F8F06B /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF60A2180F11D000F8F06B /* EditFriendsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		3CEF609C180EE7E900F8F06B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		3CEF609E180EE83400F8F06B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = ../SignUpViewController.h; sourceTree = "<group>"; };
 		3CEF609F180EE83400F8F06B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = ../SignUpViewController.m; sourceTree = "<group>"; };
+		3CEF60A1180F11D000F8F06B /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditFriendsViewController.h; path = ../EditFriendsViewController.h; sourceTree = "<group>"; };
+		3CEF60A2180F11D000F8F06B /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditFriendsViewController.m; path = ../EditFriendsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 			children = (
 				3CA09B98180DE9A800D35398 /* AppDelegate.h */,
 				3CA09B99180DE9A800D35398 /* AppDelegate.m */,
+				3CEF60A1180F11D000F8F06B /* EditFriendsViewController.h */,
+				3CEF60A2180F11D000F8F06B /* EditFriendsViewController.m */,
 				3CEF609E180EE83400F8F06B /* SignUpViewController.h */,
 				3CEF609F180EE83400F8F06B /* SignUpViewController.m */,
 				3CEF609B180EE7E900F8F06B /* LoginViewController.h */,
@@ -260,6 +265,7 @@
 				3CA09BB7180EC84000D35398 /* InboxViewController.m in Sources */,
 				3CEF609D180EE7E900F8F06B /* LoginViewController.m in Sources */,
 				3CEF60A0180EE83400F8F06B /* SignUpViewController.m in Sources */,
+				3CEF60A3180F11D000F8F06B /* EditFriendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

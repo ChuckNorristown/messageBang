@@ -172,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="1037" y="1081"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Friends-->
         <scene sceneID="NX1-gg-qaG">
             <objects>
                 <tableViewController id="HZN-h4-Vjb" sceneMemberID="viewController">
@@ -196,11 +196,47 @@
                             <outlet property="delegate" destination="HZN-h4-Vjb" id="pRY-63-x1h"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RJx-qU-jJr"/>
+                    <navigationItem key="navigationItem" title="Friends" id="RJx-qU-jJr">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="yeF-fP-a5e">
+                            <connections>
+                                <segue destination="cAX-8u-zPp" kind="push" id="Xiz-FP-yce"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1JT-d7-UcD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1037" y="512"/>
+        </scene>
+        <!--Edit Friends View Controller - Edit Friends-->
+        <scene sceneID="aUH-jq-enW">
+            <objects>
+                <tableViewController id="cAX-8u-zPp" customClass="EditFriendsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="T5F-3U-D95">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="sIV-xY-ZYt">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cAX-8u-zPp" id="3e2-Hr-lvN"/>
+                            <outlet property="delegate" destination="cAX-8u-zPp" id="k8q-Nl-hWU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Friends" id="BKt-pG-9aK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIS-q8-sqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418" y="512"/>
         </scene>
         <!--Sign Up View Controller - messageBang-->
         <scene sceneID="1sN-vl-XNx">
