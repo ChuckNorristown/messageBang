@@ -19,7 +19,22 @@
 
 {
     [super viewDidLoad];
-
+    self.imagePicker = [[UIImagePickerController alloc] init];
+    self.imagePicker.delegate = self;
+    self.imagePicker.allowsEditing = NO;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:
+        UIImagePickerControllerSourceTypeCamera]) {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+        
+    self.imagePicker.mediaTypes = [UIImagePickerController
+        availableMediaTypesForSourceType:self.imagePicker.sourceType];
+    
+    [self presentViewController:self.imagePicker animated:NO completion:nil];
 }
 
 #pragma mark - Table view data source
