@@ -199,7 +199,7 @@
                     <navigationItem key="navigationItem" title="Friends" id="RJx-qU-jJr">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="yeF-fP-a5e">
                             <connections>
-                                <segue destination="cAX-8u-zPp" kind="push" id="Xiz-FP-yce"/>
+                                <segue destination="cAX-8u-zPp" kind="push" identifier="showEditFriends" id="Xiz-FP-yce"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
