@@ -72,8 +72,8 @@
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 
-    PFRelation *friendsRelation = [self.currentUser relationforKey:@"friendsRelation"];
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
+    PFRelation *friendsRelation = [self.currentUser relationforKey:@"friendsRelation"];
     
     if ([self isFriend:user]) {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -84,7 +84,6 @@
                 break;
             }
         }
-        
         [friendsRelation removeObject:user];
     }
     else {
