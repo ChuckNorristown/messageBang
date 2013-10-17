@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0C6B28181023C100366647 /* FreindsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C6B27181023C100366647 /* FreindsViewController.m */; };
 		3CA09B8A180DE9A800D35398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA09B89180DE9A800D35398 /* UIKit.framework */; };
 		3CA09B8C180DE9A800D35398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA09B8B180DE9A800D35398 /* Foundation.framework */; };
 		3CA09B8E180DE9A800D35398 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA09B8D180DE9A800D35398 /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0C6B26181023C100366647 /* FreindsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FreindsViewController.h; path = ../FreindsViewController.h; sourceTree = "<group>"; };
+		3C0C6B27181023C100366647 /* FreindsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FreindsViewController.m; path = ../FreindsViewController.m; sourceTree = "<group>"; };
 		3CA09B86180DE9A800D35398 /* messageBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = messageBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA09B89180DE9A800D35398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3CA09B8B180DE9A800D35398 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -150,6 +153,8 @@
 				3CA09B99180DE9A800D35398 /* AppDelegate.m */,
 				3CEF60A1180F11D000F8F06B /* EditFriendsViewController.h */,
 				3CEF60A2180F11D000F8F06B /* EditFriendsViewController.m */,
+				3C0C6B26181023C100366647 /* FreindsViewController.h */,
+				3C0C6B27181023C100366647 /* FreindsViewController.m */,
 				3CEF609E180EE83400F8F06B /* SignUpViewController.h */,
 				3CEF609F180EE83400F8F06B /* SignUpViewController.m */,
 				3CEF609B180EE7E900F8F06B /* LoginViewController.h */,
@@ -266,6 +271,7 @@
 				3CEF609D180EE7E900F8F06B /* LoginViewController.m in Sources */,
 				3CEF60A0180EE83400F8F06B /* SignUpViewController.m in Sources */,
 				3CEF60A3180F11D000F8F06B /* EditFriendsViewController.m in Sources */,
+				3C0C6B28181023C100366647 /* FreindsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
