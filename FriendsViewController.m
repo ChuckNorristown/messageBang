@@ -1,19 +1,19 @@
 //
-//  FreindsViewController.m
+//  FriendsViewController.m
 //  messageBang
 //
 //  Created by Sean Shields on 10/17/13.
 //  Copyright (c) 2013 Sean Shields. All rights reserved.
 //
 
-#import "FreindsViewController.h"
+#import "FriendsViewController.h"
 #import "EditFriendsViewController.h"
 
-@interface FreindsViewController ()
+@interface FriendsViewController ()
 
 @end
 
-@implementation FreindsViewController
+@implementation FriendsViewController
 
 - (void)viewDidLoad
 {

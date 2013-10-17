@@ -1,5 +1,5 @@
 //
-//  FreindsViewController.h
+//  FriendsViewController.h
 //  messageBang
 //
 //  Created by Sean Shields on 10/17/13.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface FreindsViewController : UITableViewController
+@interface FriendsViewController : UITableViewController
 
 @property (nonatomic, strong) PFRelation *friendsRelation;
 @property (nonatomic, strong) NSArray *friends;

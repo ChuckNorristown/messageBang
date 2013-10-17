@@ -71,19 +71,20 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-
+    
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     PFRelation *friendsRelation = [self.currentUser relationforKey:@"friendsRelation"];
     
     if ([self isFriend:user]) {
         cell.accessoryType = UITableViewCellAccessoryNone;
         
-        for(PFUser *friend in self.friends) {
+        for (PFUser *friend in self.friends) {
             if ([friend.objectId isEqualToString:user.objectId]) {
                 [self.friends removeObject:friend];
                 break;
             }
         }
+
         [friendsRelation removeObject:user];
     }
     else {

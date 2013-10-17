@@ -142,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="1418" y="-61"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="9Nd-QD-nCz">
             <objects>
-                <tableViewController id="CCb-1W-iqf" sceneMemberID="viewController">
+                <tableViewController id="CCb-1W-iqf" customClass="CameraViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4a7-gd-t7W">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,11 +363,11 @@
         <image name="inbox.png" width="32" height="21"/>
     </resources>
     <classes>
+        <class className="CameraViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
+        </class>
         <class className="EditFriendsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditFriendsViewController.h"/>
-        </class>
-        <class className="FreindsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FreindsViewController.h"/>
         </class>
         <class className="InboxViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InboxViewController.h"/>
