@@ -71,7 +71,7 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
+
     PFRelation *friendsRelation = [self.currentUser relationforKey:@"friendsRelation"];
     PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
     
