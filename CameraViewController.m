@@ -18,21 +18,26 @@
 - (void)viewDidLoad
 
 {
-    [super viewDidLoad];
+    [super viewDidLoad];    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.delegate = self;
     self.imagePicker.allowsEditing = NO;
     
     if ([UIImagePickerController isSourceTypeAvailable:
-        UIImagePickerControllerSourceTypeCamera]) {
+         UIImagePickerControllerSourceTypeCamera]) {
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     }
     else {
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        }
-        
+    }
+    
     self.imagePicker.mediaTypes = [UIImagePickerController
-        availableMediaTypesForSourceType:self.imagePicker.sourceType];
+                                   availableMediaTypesForSourceType:self.imagePicker.sourceType];
     
     [self presentViewController:self.imagePicker animated:NO completion:nil];
 }
@@ -74,6 +79,18 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark - Image Picker Controller delegate
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:NO completion:nil];
+    
+    [self.tabBarController setSelectedIndex:0];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
 }
 
 @end
