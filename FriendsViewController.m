@@ -1,7 +1,6 @@
 //
 //  FriendsViewController.m
 //  messageBang
-//
 //  Created by Sean Shields on 10/17/13.
 //  Copyright (c) 2013 Sean Shields. All rights reserved.
 //
@@ -20,6 +19,11 @@
     [super viewDidLoad];
     
     self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"username"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -31,6 +35,7 @@
             [self.tableView reloadData];
         }
     }];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
