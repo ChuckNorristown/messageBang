@@ -7,6 +7,7 @@
 //
 
 #import "CameraViewController.h"
+#import <MobileCoreServices/UTCoreTypes.h>
 
 @interface CameraViewController ()
 
@@ -14,9 +15,7 @@
 
 @implementation CameraViewController
 
-
 - (void)viewDidLoad
-
 {
     [super viewDidLoad];    
 }
@@ -27,6 +26,7 @@
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.delegate = self;
     self.imagePicker.allowsEditing = NO;
+    self.imagePicker.videoMaximumDuration = 10;
     
     if ([UIImagePickerController isSourceTypeAvailable:
          UIImagePickerControllerSourceTypeCamera]) {
@@ -46,9 +46,8 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -83,14 +82,46 @@
 
 #pragma mark - Image Picker Controller delegate
 
-- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:NO completion:nil];
-    
     [self.tabBarController setSelectedIndex:0];
 }
 
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
     
+    if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+        // A photo was taken/selected!
+        self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        if (self.imagePicker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+            // Save the image!
+            UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, nil);
+        }
+    }
+    else {
+        // A video was taken/selected!
+        self.videoFilePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
+        if (self.imagePicker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+            // Save the video!
+            if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(self.videoFilePath)) {
+                UISaveVideoAtPathToSavedPhotosAlbum(self.videoFilePath, nil, nil, nil);
+            }
+        }
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
